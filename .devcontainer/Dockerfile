@@ -22,3 +22,6 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requ
 
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
+RUN git config --global --add safe.directory /workspaces/Research
+RUN git config --global user.email "vittojevanoc@gmail.com"
+RUN git config --global user.name "vittojevano"

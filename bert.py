@@ -8,7 +8,7 @@ from transformers import InputExample, InputFeatures
 model = TFBertForSequenceClassification.from_pretrained("bert-base-uncased")
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 
-model.summary()
+model.summary()  # Summary for model
 URL = "https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz"
 
 dataset = tf.keras.utils.get_file(fname="aclImdb_v1.tar.gz",
@@ -22,3 +22,4 @@ main_dir = os.path.join(os.path.dirname(dataset), 'aclImdb')
 train_dir = os.path.join(main_dir, 'train')
 remove_dir = os.path.join(train_dir, 'unsup')
 shutil.rmtree(remove_dir)
+print(os.listdir(train_dir))

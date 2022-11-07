@@ -19,7 +19,18 @@ class GPT3(object):
         # input_message_str = self.convo_message_prompt + input_messages + "\n"
         input_message_str = self.convo_message_prompt + \
             "\n".join(input_messages[-self.MAX_CONVO_MESSAGES:]) + "\n"
-        engine = 'text-curie-001'
+        """
+        ここにモデルの変換が可能です
+        11/7/2022より、
+        
+        Ada: text-ada-001
+        Babbage: text-babbage-001
+        Curie: text-curie-001
+        Davinci: text-davinci-002
+        
+        詳しくはhttps://beta.openai.com/docs/models/gpt-3
+        """
+        engine = 'text-davinci-002'
         response = openai.Completion.create(
             engine=engine,
             prompt=input_message_str,

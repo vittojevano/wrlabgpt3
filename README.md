@@ -30,6 +30,9 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200286530-28b405b1-44e3-4a95-98e9-8e27e4c0039d.jpg" alt="Screenshot 2022-11-07 192100">
 </div>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200302555-02e8ad5a-f474-4d7e-9c7d-00e6ee492bf8.jpg" alt="gptapikey">
+</div>
 <p align="center">図2&nbsp;&nbsp;&nbsp;&nbsp;View API Keys</p>
 
 4. APIキーをコピーし、apikeyのフォルダを開き、api_secrets.txt の中に直接貼り付ける。
@@ -65,8 +68,12 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 
 3. アカウント場面の下にDeepL APIで使用する認証キーの確認ができます。
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/88228805/200300506-fc9fdadf-6a24-4ed4-9ee7-132b17ff6e98.jpg" alt="deeplapikey">
+  <img src="https://user-images.githubusercontent.com/88228805/200301412-8fe50786-4767-4ba0-af46-4ae4b831afd6.jpg" alt="deeplapikey">
 </div>
+<p align="center">図6&nbsp;&nbsp;&nbsp;&nbsp;DeeplのAPIキー</p>
+4. APIキーをコピーし、apikeyのフォルダを開き、apideepl.txt の中に直接貼り付ける。
 
-https://chigusa-web.com/blog/deepl-api/
-https://biz.teachme.jp/blog/deepl_translation/
+<p>参考文献= <br>
+*[Teachme Biz](https://biz.teachme.jp/blog/deepl_translation/)* (参照 2022-11-7)<br>
+*[チグサウェブ](https://chigusa-web.com/blog/deepl-api/)* (参照 2022-11-7)
+</p>

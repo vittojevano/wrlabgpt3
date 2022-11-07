@@ -7,6 +7,7 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 @2022, Vitto Jevano Christiant
 ***
 
+# I. APIの紹介と設定
 
 ## 1. OpenAI GPT-3 API
 #### 1.1 GPT-3とは

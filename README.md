@@ -18,8 +18,6 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図1&nbsp;&nbsp;&nbsp;&nbsp;GPT-3の自然言語処理「Word to Vector」（言葉をベクトル化する）</p>
 
-参考文献= *[ビジネス+IT](https://www.sbbit.jp/article/cont1/74706)* (参照 2022-11-7)
-
 #### 1.2 GPT-3の使い方
 
 1. OpenAIのURLを開く: https://openai.com/api/
@@ -40,6 +38,10 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
   <img src="https://user-images.githubusercontent.com/88228805/200270237-ad6da86a-0660-48cb-b902-2b5b3de25384.jpg" alt="apikey">
 </div>
 <p align="center">図3&nbsp;&nbsp;&nbsp;&nbsp;APIキーの書き方</p>
+
+参考文献: <br>
+*[ビジネス+IT](https://www.sbbit.jp/article/cont1/74706)* (参照 2022-11-7) <br>
+*[楽しみながら理解するAI・機械学習入門](https://data-analytics.fun/2021/12/01/gpt-3-api/)* (参照 2022-11-7)
 
 ## 2. DeepL翻訳 API
 #### 2.1 DeepL翻訳とは
@@ -70,10 +72,22 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200301412-8fe50786-4767-4ba0-af46-4ae4b831afd6.jpg" alt="deeplapikey">
 </div>
-<p align="center">図6&nbsp;&nbsp;&nbsp;&nbsp;DeeplのAPIキー</p>
+<p align="center">図7&nbsp;&nbsp;&nbsp;&nbsp;DeeplのAPIキー</p>
 4. APIキーをコピーし、apikeyのフォルダを開き、apideepl.txt の中に直接貼り付ける。
 
-<p>参考文献= <br>
+参考文献: <br>
 *[Teachme Biz](https://biz.teachme.jp/blog/deepl_translation/)* (参照 2022-11-7)<br>
 *[チグサウェブ](https://chigusa-web.com/blog/deepl-api/)* (参照 2022-11-7)
-</p>
+
+## 3. Google Cloud Speech-to-Text API
+#### 3.1 Google Cloudとは
+
+<p> Google Cloud Speech-to-Text APIは音声データから文字起こしをするAPIです。この音声データは音声ファイル(.wavや.flacなど)や、マイクから入力されるストリーム形式まで幅広く対応しています。サービス自体は数年前からありましたが、最近になりストリーミング音源のテキスト起こしが時間無制限でできるようになったみたいなので試してみました。</p>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200306239-cbaa8a3e-4fe1-4939-b40f-c574976acf16.jpg" alt="googlestt">
+</div>
+<p align="center">図8&nbsp;&nbsp;&nbsp;&nbsp;Google Cloud Speech-to-Text</p>
+
+参考文献: <br>
+*[Optim Tech Blog](https://tech-blog.optim.co.jp/entry/2020/02/21/163000#Google-Cloud-Speech-to-Text-API-%E3%81%A8%E3%81%AF)* (参照 2022-11-7)
+

@@ -23,9 +23,8 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 #### 1.2 GPT-3の使い方
 
 1. OpenAIのURLを開く: https://openai.com/api/
-2. Sign Upをクリックする。
-3. アカウントを作成する。電話番号の登録が必要なのでご注意ください。
-4. APIキーを設定する。
+2. 「Sign Up」をクリックし、アカウントを作成する。電話番号やクレジットカードの情報の登録が必要なのでご注意ください。
+3. APIキーを設定する。
 <p> &nbsp;&nbsp;&nbsp;&nbsp;APIキーはログインした後に右上の「Personal」から「View API Keys」をクリックすることで確認することができます。</p>
 
 <div align="center">
@@ -33,7 +32,7 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図2&nbsp;&nbsp;&nbsp;&nbsp;View API Keys</p>
 
-5. APIキーをコピーし、apikeyのフォルダを開き、api_secrets.txt の中に直接貼り付ける。
+4. APIキーをコピーし、apikeyのフォルダを開き、api_secrets.txt の中に直接貼り付ける。
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200270237-ad6da86a-0660-48cb-b902-2b5b3de25384.jpg" alt="apikey">
 </div>
@@ -53,8 +52,21 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 #### 2.2 DeepL翻訳の使い方
 
 1. DeepL翻訳 APIのURLを開く: https://www.deepl.com/pro-api?cta=header-pro-api
-2. a
-
+2. 「無料で登録する」をクリックし、無料版のアカウントを作る。クレジットカードの情報の登録が必要なのでご注意ください。
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/88228805/200296372-494f2f81-987a-40d9-903c-846faf4fde5e.jpg" alt="deeplapi">
+  <img src="https://user-images.githubusercontent.com/88228805/200298208-7cf1982c-1322-4d23-907b-b01b74431686.jpg" alt="deeplapi">
 </div>
+<p align="center">図5&nbsp;&nbsp;&nbsp;&nbsp;無料で登録する</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;ログインができたらDeepLのアカウントのプラン場面で無料版の「DeepL API Free」に申し込んでいることが確認できます。</p>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200300506-fc9fdadf-6a24-4ed4-9ee7-132b17ff6e98.jpg" alt="deeplfree">
+</div>
+<p align="center">図6&nbsp;&nbsp;&nbsp;&nbsp;DeepL API Freeの確認</p>
+
+3. アカウント場面の下にDeepL APIで使用する認証キーの確認ができます。
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200300506-fc9fdadf-6a24-4ed4-9ee7-132b17ff6e98.jpg" alt="deeplapikey">
+</div>
+
+https://chigusa-web.com/blog/deepl-api/
+https://biz.teachme.jp/blog/deepl_translation/

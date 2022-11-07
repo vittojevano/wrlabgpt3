@@ -7,6 +7,7 @@ from gpt3en import GPT3
 from translate import Deepltranslate
 from timeset import Timeset
 
+
 class GetRespondState():
     Idle = "Idle"
     Listening = "Listening"
@@ -14,6 +15,7 @@ class GetRespondState():
     HearingTimeOut = "HearingTimeOut"
     GPT3TimeOut = "GPT3TimeOut"
     Completed = "Completed"
+
 
 class GPTSystem():
 
@@ -24,9 +26,9 @@ class GPTSystem():
 
     def __init__(self):
         self._conversations = []
-        self._googlestt = GoogleSTT() #thoughts
-        self._gpt = GPT3() # hearing
-        self._translate = Deepltranslate() # deepl
+        self._googlestt = GoogleSTT()  # thoughts
+        self._gpt = GPT3()  # hearing
+        self._translate = Deepltranslate()  # deepl
         self._respond_state = GetRespondState.Idle
         self._last_gpt3_response = None
         self._gpt3_call_completed = False
@@ -35,11 +37,11 @@ class GPTSystem():
     def speak(self, text, record=True):
         print(f"AI:{text}")
         self._googlestt.stop_listening()
-        
+
         # Record what the AI said
         if record:
             self._conversations.append(f"AI:{text}")
-    
+
     def start_listening(self):
         self._googlestt.start_listening()
 
@@ -66,8 +68,10 @@ class GPTSystem():
 
                 # Record message
                 # Translate to english language
-                last_heard_message = self._translate.transen(last_heard_message)
-                self._conversations.append(f"{self.HumanPrefix}:{last_heard_message}")
+                last_heard_message = self._translate.transen(
+                    last_heard_message)
+                self._conversations.append(
+                    f"{self.HumanPrefix}:{last_heard_message}")
 
                 self._respond_state = GetRespondState.WaitingForGPT3
                 self._gpt3_call_completed = False
@@ -75,8 +79,10 @@ class GPTSystem():
                 self._stop_watch = Timeset()
 
                 # Pass the convo history to GPT3 to generate responds
-                self._last_request_id = random.random() # Generate random request id and keep it for request cancellation
-                self._thread = threading.Thread(target=self._callback, args=(self._last_request_id,))
+                # Generate random request id and keep it for request cancellation
+                self._last_request_id = random.random()
+                self._thread = threading.Thread(
+                    target=self._callback, args=(self._last_request_id,))
                 self._thread.daemon = False
                 self._thread.start()
             else:
@@ -102,7 +108,7 @@ class GPTSystem():
                     self._respond_state = GetRespondState.GPT3TimeOut
 
         return self._respond_state, respond_message
-    
+
     def reset(self):
         self.stop_listening()
         self._respond_state = GetRespondState.Idle
@@ -110,7 +116,8 @@ class GPTSystem():
         self._conversations = []
 
     def _callback(self, request_id):
-        full_conversations, last_response = self._gpt.conversation(self._conversations)
+        full_conversations, last_response = self._gpt.conversation(
+            self._conversations)
 
         # Only return the response if the last request id is ours. Otherwise, another request might be
         # running and let it be the one to return the response

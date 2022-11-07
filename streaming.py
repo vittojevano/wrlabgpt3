@@ -1,17 +1,18 @@
 import os
 import threading
-import time
 
 import pyaudio
 from google.cloud import speech
 from six.moves import queue
 
+# APIキーの読み取りと確認
 Cloud_KEY = "apikey/Cloud_KEY.json"
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = Cloud_KEY
 
-# Audio recording parameters
+# 音声記録パラメータ
 RATE = 44100
 CHUNK = int(RATE / 10)  # 100ms
+
 
 class MicrophoneStream(object):
     """Opens a recording stream as a generator yielding the audio chunks."""
@@ -29,7 +30,7 @@ class MicrophoneStream(object):
         self._audio_stream = self._audio_interface.open(
             format=pyaudio.paInt16,
 
-            channels=1, 
+            channels=1,
             rate=self._rate,
             input_device_index=0,
             input=True,
@@ -37,9 +38,10 @@ class MicrophoneStream(object):
 
             stream_callback=self._fill_buffer,
         )
-        # Do not listen at start
+        # 初めて起動するときに音声をに聞かない
         self._listening = False
         self.closed = False
+        # print("ここはenter")
 
         return self
 
@@ -64,6 +66,7 @@ class MicrophoneStream(object):
         return self._listening
 
     def generator(self):
+        # print("ここはgenerator")
         while not self.closed:
             # Use a blocking get() to ensure there's at least one chunk of
             # data, and stop iteration if the chunk is None, indicating the
@@ -73,12 +76,12 @@ class MicrophoneStream(object):
                 return
 
             if not self._listening:
-                # print("disini masuk generator kgk listen")
+                # print("listeningの状態出ない場合は続く")
                 continue
 
             data = [chunk]
 
-            # Now consume whatever other data's still buffered.
+            # まだバッファリングされている他のデータを全て処理する。
             while True:
                 try:
                     chunk = self._buff.get(block=False)
@@ -90,10 +93,11 @@ class MicrophoneStream(object):
 
             yield b"".join(data)
 
+
 class SpeechInputRecognitionStreaming(object):
 
     def __init__(self):
-        self._language_supports = "ja-JP"
+        self._language_supports = "ja-JP"  # 日本語を受け取るに設定
         self.ready = False
         self._stream = None
 
@@ -140,7 +144,7 @@ class SpeechInputRecognitionStreaming(object):
             else:
                 finaltext = transcript + overwrite_chars
 
-                # Don't listen while we are going to start talking
+                # 話す途中に聞かない
                 # stream.setListening(False)
 
                 if stream.isListening():
@@ -148,15 +152,16 @@ class SpeechInputRecognitionStreaming(object):
                         break
                 # stream.setListening(True)
 
-                # Can start listening again now
+                # 今は聞いていい
 
                 num_chars_printed = 0
 
     def set_listening(self, is_listening):
         if not self.ready:
+            # readyがTrueになるまでに待つ。
             time = threading.Timer(3.0, self.set_listening, [is_listening])
             time.start()
-        else:    
+        else:
             self._stream.setListening(is_listening)
 
     def is_listening(self):
@@ -167,12 +172,12 @@ class SpeechInputRecognitionStreaming(object):
 
     def listen_forever(self, callback):
         while True:
-            language_code = "ja-JP"
+            language_code = self._language_supports
             # alternative_language_codes = []
             #
             # if len(self._language_supports) > 1:
             #   alternative_language_codes = self._language_supports[1:]
-            
+
             # CHECK HERE!!!
             client = speech.SpeechClient()
             # client = speech.SpeechClient
@@ -194,7 +199,10 @@ class SpeechInputRecognitionStreaming(object):
                             for content in audio_generator)
 
                 self.ready = True
-                responses = client.streaming_recognize(streaming_config, requests)
+
+                # ここのエラーを無視してください(実際はエラーではない)
+                responses = client.streaming_recognize(
+                    streaming_config, requests)
 
                 try:
                     self._listenPrintLoop(responses, callback, stream)
@@ -202,4 +210,4 @@ class SpeechInputRecognitionStreaming(object):
                 except Exception as ex:
                     # Most Likely stream too long Exception, so just log and restart
                     print(ex)
-                    pass           
+                    pass

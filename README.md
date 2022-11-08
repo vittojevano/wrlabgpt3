@@ -156,6 +156,16 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図17&nbsp;&nbsp;&nbsp;&nbsp;Google Cloud Storage JSON API</p>
 
+9. ナビゲーションメニューを開き、「IAMと管理」の「サービスアカウント」を開く。
+<p>&nbsp;&nbsp;&nbsp;&nbsp;「サービスアカウントを作成」のボタンをクリックする。次に、サービスアカウント名を気入し、「作成して続行」ボタンをクリックする。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;「このサービス アカウントにプロジェクトへのアクセスを許可する」、「ユーザーにこのサービス アカウントへのアクセスを許可」を省略し、「続行」、「完了」ボタンをクリックする。</p>
+
+10. サービスアカウントで作成したアカウントの右側に三つの点をクリックし、「鍵を管理」をクリックする。
+<p>&nbsp;&nbsp;&nbsp;&nbsp;「鍵を追加」をクリックし、「新しい鍵を作成」を選択し、「JSON」で鍵を作成する。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;作成が完成したらGoogle Cloud APIキーがダウンロードされます。</p>
+
+11. 作成したGoogle Cloud APIキーを全てコピーし、apikeyのフォルダを開き、Cloud_KEY.jsonの中に貼り付ける。
+
 
 参考文献: <br>
 *[Optim Tech Blog](https://tech-blog.optim.co.jp/entry/2020/02/21/163000#Google-Cloud-Speech-to-Text-API-%E3%81%A8%E3%81%AF)* (参照 2022-11-7)　<br>

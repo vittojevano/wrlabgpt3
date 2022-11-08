@@ -121,14 +121,42 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 <p align="center">図12&nbsp;&nbsp;&nbsp;&nbsp;作成したプロジェクトを開く</p>
 
 4. ナビゲーションメニューを開き、「APIとサービス」の「ライブラリー」を開く。
-<p>&nbsp;&nbsp;&nbsp;&nbsp;プロジェクトリストを再び開き、作成したプロジェクトを開く。</p>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200509653-44f84a4d-3e4f-4e9d-986a-bf3798888efa.jpg" alt="sttlibrary">
 </div>
 <p align="center">図13&nbsp;&nbsp;&nbsp;&nbsp;APIのライブラリー</p>
 
+5. 検索場面にSpeech-to-Textを検索し、「Cloud Speech-to-Text API」をクリックする。
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200514647-ea371dac-ae9f-485d-91c2-05ebd63f5ff0.jpg" alt="sttapi">
+</div>
+<p align="center">図14&nbsp;&nbsp;&nbsp;&nbsp;Cloud Speech-to-Text API</p>
+
+6. 「Cloud Speech-to-Text API」の場面に「有効にする」ボタンをクリックする。
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200515511-d5887ef2-47ca-42d7-9d7b-50ea71cdd8a8.jpg" alt="enablestt">
+</div>
+<p align="center">図15&nbsp;&nbsp;&nbsp;&nbsp;「有効にする」ボタンをクリックする</p>
+
+7. 検索場面にCloud Storage APIを検索し、「Cloud Storage API」をクリックし、「有効にする」ボタンをクリックする。
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200516526-f593f6de-b438-4e1d-9749-a2ea1b1bd632.jpg" alt="cloudstorageapi">
+</div>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200517300-c2823744-8244-492d-99fe-2cb89a7500b6.jpg" alt="csapi">
+</div>
+<p align="center">図16&nbsp;&nbsp;&nbsp;&nbsp;Cloud Storage API</p>
+
+8. 検索場面にCloud Storage JSON APIを検索し、「Google Cloud Storage JSON API」をクリックし、「有効にする」ボタンをクリックする。
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200517922-7390da7a-731e-4b3d-a714-aefc6a22e3dd.jpg" alt="csjsonapi1">
+</div>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200518019-0012e36b-6d37-4890-87fd-4f6e15b57233.jpg" alt="csjsonapi2">
+</div>
+<p align="center">図17&nbsp;&nbsp;&nbsp;&nbsp;Google Cloud Storage JSON API</p>
 
 
 参考文献: <br>
-*[Optim Tech Blog](https://tech-blog.optim.co.jp/entry/2020/02/21/163000#Google-Cloud-Speech-to-Text-API-%E3%81%A8%E3%81%AF)* (参照 2022-11-7)
+*[Optim Tech Blog](https://tech-blog.optim.co.jp/entry/2020/02/21/163000#Google-Cloud-Speech-to-Text-API-%E3%81%A8%E3%81%AF)* (参照 2022-11-7)　<br>
 *[Youtube チュートリアル](youtube.com/watch?v=lKra6E_tp5U&t=654s)* (参照 2022-11-8)

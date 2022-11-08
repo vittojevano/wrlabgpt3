@@ -32,11 +32,13 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図2&nbsp;&nbsp;&nbsp;&nbsp;View API Keys</p>
 
+
 4. APIキーをコピーし、apikeyのフォルダを開き、api_secrets.txt の中に直接貼り付ける。
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200270237-ad6da86a-0660-48cb-b902-2b5b3de25384.jpg" alt="apikey">
 </div>
 <p align="center">図3&nbsp;&nbsp;&nbsp;&nbsp;APIキーの書き方</p>
+
 
 参考文献: <br>
 *[ビジネス+IT](https://www.sbbit.jp/article/cont1/74706)* (参照 2022-11-7) <br>
@@ -67,12 +69,16 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図6&nbsp;&nbsp;&nbsp;&nbsp;DeepL API Freeの確認</p>
 
+
 3. アカウント場面の下にDeepL APIで使用する認証キーの確認ができます。
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200301412-8fe50786-4767-4ba0-af46-4ae4b831afd6.jpg" alt="deeplapikey">
 </div>
 <p align="center">図7&nbsp;&nbsp;&nbsp;&nbsp;DeeplのAPIキー</p>
+
+
 4. APIキーをコピーし、apikeyのフォルダを開き、apideepl.txt の中に直接貼り付ける。
+
 
 参考文献: <br>
 *[Teachme Biz](https://biz.teachme.jp/blog/deepl_translation/)* (参照 2022-11-7)<br>
@@ -96,11 +102,13 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図9&nbsp;&nbsp;&nbsp;&nbsp;無料トライアルに登録</p>
 
+
 3. ログインができたら、「Google Cloud」の右側にプロジェクトリストを開く。
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200508607-2295ac02-e13b-4d1d-b6ae-576d0500b6b6.jpg" alt="gcpproject1">
 </div>
 <p align="center">図10&nbsp;&nbsp;&nbsp;&nbsp;プロジェクトリストを開く</p>
+
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;新しいプロジェクトをクリックする。次に、プロジェクト名等を記入し、新しいプロジェクトを作成する。</p>
 <div align="center">
@@ -110,11 +118,13 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 
 <p align="center">図11&nbsp;&nbsp;&nbsp;&nbsp;新しいプロジェクトの作成</p>
 
+
 <p>&nbsp;&nbsp;&nbsp;&nbsp;プロジェクトリストを再び開き、作成したプロジェクトを開く。</p>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200509021-fdd8518f-cf22-4c1c-a355-c9f6991d924d.jpg" alt="gcpproject4">
 </div>
 <p align="center">図12&nbsp;&nbsp;&nbsp;&nbsp;作成したプロジェクトを開く</p>
+
 
 4. ナビゲーションメニューを開き、「APIとサービス」の「ライブラリー」を開く。
 <div align="center">
@@ -122,17 +132,20 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図13&nbsp;&nbsp;&nbsp;&nbsp;APIのライブラリー</p>
 
+
 5. 検索場面にSpeech-to-Textを検索し、「Cloud Speech-to-Text API」をクリックする。
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200514647-ea371dac-ae9f-485d-91c2-05ebd63f5ff0.jpg" alt="sttapi">
 </div>
 <p align="center">図14&nbsp;&nbsp;&nbsp;&nbsp;Cloud Speech-to-Text API</p>
 
+
 6. 「Cloud Speech-to-Text API」の場面に「有効にする」ボタンをクリックする。
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200515511-d5887ef2-47ca-42d7-9d7b-50ea71cdd8a8.jpg" alt="enablestt">
 </div>
 <p align="center">図15&nbsp;&nbsp;&nbsp;&nbsp;「有効にする」ボタンをクリックする</p>
+
 
 7. 検索場面にCloud Storage APIを検索し、「Cloud Storage API」をクリックし、「有効にする」ボタンをクリックする。
 <div align="center">
@@ -141,6 +154,7 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図16&nbsp;&nbsp;&nbsp;&nbsp;Cloud Storage API</p>
 
+
 8. 検索場面にCloud Storage JSON APIを検索し、「Google Cloud Storage JSON API」をクリックし、「有効にする」ボタンをクリックする。
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200517922-7390da7a-731e-4b3d-a714-aefc6a22e3dd.jpg" alt="csjsonapi1">
@@ -148,24 +162,28 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図17&nbsp;&nbsp;&nbsp;&nbsp;Google Cloud Storage JSON API</p>
 
+
 9. ナビゲーションメニューを開き、「IAMと管理」の「サービスアカウント」を開く。
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200535649-90674470-4d50-404c-9ec3-720f0d9ffd07.jpg" alt="serviceacc">
 </div>
 <p align="center">図18&nbsp;&nbsp;&nbsp;&nbsp;サービスアカウント</p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;「サービスアカウントを作成」のボタンをクリックする。次に、サービスアカウント名を気入し、「作成して続行」ボタンをクリックする。</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;「サービスアカウントを作成」のボタンをクリックする。次に、サービスアカウント名を記入し、「作成して続行」ボタンをクリックする。</p>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200535949-d4f5054f-4d4c-4504-a024-b4bde36a9f66.jpg" alt="serviceacc1">
   <img src="https://user-images.githubusercontent.com/88228805/200536038-8f866067-237b-4bb9-b8e0-91bb304931b9.jpg" alt="serviceacc2">
 </div>
 <p align="center">図19&nbsp;&nbsp;&nbsp;&nbsp;サービスアカウントの作成</p>  
 
+
 <p>&nbsp;&nbsp;&nbsp;&nbsp;「このサービス アカウントにプロジェクトへのアクセスを許可する」、「ユーザーにこのサービス アカウントへのアクセスを許可」を省略し、「続行」、「完了」ボタンをクリックする。</p>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200536233-e68fc658-85bd-44be-871c-1ff19ee23ab6.jpg" alt="serviceacc3">
 </div>
 <p align="center">図20&nbsp;&nbsp;&nbsp;&nbsp;サービスアカウントの作成の続き</p>  
+
 
 10. サービスアカウントで作成したアカウントの右側に三つの点をクリックし、「鍵を管理」をクリックする。
 <div align="center">
@@ -184,9 +202,10 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;作成が完成したらGoogle Cloud APIキーがダウンロードされます。</p>
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/88228805/200538971-340fa944-8a34-4530-9150-6d736a0a1b2c.jpgg" alt="sttkey4">
+  <img src="https://user-images.githubusercontent.com/88228805/200538971-340fa944-8a34-4530-9150-6d736a0a1b2c.jpg" alt="sttkey4">
 </div>
 <p align="center">図23&nbsp;&nbsp;&nbsp;&nbsp;Google Cloud APIキー</p>   
+
 
 11. 作成したGoogle Cloud APIキーを全てコピーし、apikeyのフォルダを開き、Cloud_KEY.jsonの中に貼り付ける。
 

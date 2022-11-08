@@ -28,8 +28,6 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200286530-28b405b1-44e3-4a95-98e9-8e27e4c0039d.jpg" alt="Screenshot 2022-11-07 192100">
-</div>
-<div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200302555-02e8ad5a-f474-4d7e-9c7d-00e6ee492bf8.jpg" alt="gptapikey">
 </div>
 <p align="center">図2&nbsp;&nbsp;&nbsp;&nbsp;View API Keys</p>
@@ -107,8 +105,6 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 <p>&nbsp;&nbsp;&nbsp;&nbsp;新しいプロジェクトをクリックする。次に、プロジェクト名等を記入し、新しいプロジェクトを作成する。</p>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200508733-75ea7917-68e0-4b3c-8c58-cd66d3ea8ced.jpg" alt="gcpproject2">
-</div>
-<div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200508853-6029d25c-b6f6-4284-9e13-9cc5ad9c2d8c.jpg" alt="gcpproject3">
 </div>
 
@@ -141,8 +137,6 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 7. 検索場面にCloud Storage APIを検索し、「Cloud Storage API」をクリックし、「有効にする」ボタンをクリックする。
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200516526-f593f6de-b438-4e1d-9749-a2ea1b1bd632.jpg" alt="cloudstorageapi">
-</div>
-<div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200517300-c2823744-8244-492d-99fe-2cb89a7500b6.jpg" alt="csapi">
 </div>
 <p align="center">図16&nbsp;&nbsp;&nbsp;&nbsp;Cloud Storage API</p>
@@ -150,19 +144,49 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 8. 検索場面にCloud Storage JSON APIを検索し、「Google Cloud Storage JSON API」をクリックし、「有効にする」ボタンをクリックする。
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200517922-7390da7a-731e-4b3d-a714-aefc6a22e3dd.jpg" alt="csjsonapi1">
-</div>
-<div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200518019-0012e36b-6d37-4890-87fd-4f6e15b57233.jpg" alt="csjsonapi2">
 </div>
 <p align="center">図17&nbsp;&nbsp;&nbsp;&nbsp;Google Cloud Storage JSON API</p>
 
 9. ナビゲーションメニューを開き、「IAMと管理」の「サービスアカウント」を開く。
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200535649-90674470-4d50-404c-9ec3-720f0d9ffd07.jpg" alt="serviceacc">
+</div>
+<p align="center">図18&nbsp;&nbsp;&nbsp;&nbsp;サービスアカウント</p>
+
 <p>&nbsp;&nbsp;&nbsp;&nbsp;「サービスアカウントを作成」のボタンをクリックする。次に、サービスアカウント名を気入し、「作成して続行」ボタンをクリックする。</p>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200535949-d4f5054f-4d4c-4504-a024-b4bde36a9f66.jpg" alt="serviceacc1">
+  <img src="https://user-images.githubusercontent.com/88228805/200536038-8f866067-237b-4bb9-b8e0-91bb304931b9.jpg" alt="serviceacc2">
+</div>
+<p align="center">図19&nbsp;&nbsp;&nbsp;&nbsp;サービスアカウントの作成</p>  
+
 <p>&nbsp;&nbsp;&nbsp;&nbsp;「このサービス アカウントにプロジェクトへのアクセスを許可する」、「ユーザーにこのサービス アカウントへのアクセスを許可」を省略し、「続行」、「完了」ボタンをクリックする。</p>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200536233-e68fc658-85bd-44be-871c-1ff19ee23ab6.jpg" alt="serviceacc3">
+</div>
+<p align="center">図20&nbsp;&nbsp;&nbsp;&nbsp;サービスアカウントの作成の続き</p>  
 
 10. サービスアカウントで作成したアカウントの右側に三つの点をクリックし、「鍵を管理」をクリックする。
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200537069-6474023e-c138-4cf8-a2d3-7d9d6800b4cb.jpg" alt="sttkey">
+</div>
+<p align="center">図21&nbsp;&nbsp;&nbsp;&nbsp;「鍵を管理」をクリック</p>  
+
+  
 <p>&nbsp;&nbsp;&nbsp;&nbsp;「鍵を追加」をクリックし、「新しい鍵を作成」を選択し、「JSON」で鍵を作成する。</p>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200536980-8e008f50-dfea-4fd5-bf52-b82f8c8dc2d0.jpg" alt="sttkey2">
+  <img src="https://user-images.githubusercontent.com/88228805/200537221-0bf77c3e-29f1-4334-805b-dbc8da7807b9.jpg" alt="sttkey3">
+</div>
+<p align="center">図22&nbsp;&nbsp;&nbsp;&nbsp;新しい鍵を作成する</p>   
+
+
 <p>&nbsp;&nbsp;&nbsp;&nbsp;作成が完成したらGoogle Cloud APIキーがダウンロードされます。</p>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200538971-340fa944-8a34-4530-9150-6d736a0a1b2c.jpgg" alt="sttkey4">
+</div>
+<p align="center">図23&nbsp;&nbsp;&nbsp;&nbsp;Google Cloud APIキー</p>   
 
 11. 作成したGoogle Cloud APIキーを全てコピーし、apikeyのフォルダを開き、Cloud_KEY.jsonの中に貼り付ける。
 

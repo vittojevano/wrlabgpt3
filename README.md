@@ -58,7 +58,7 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 #### 2.2 DeepL翻訳の使い方
 
 1. DeepL翻訳 APIのURLを開く: https://www.deepl.com/pro-api?cta=header-pro-api
-2. 「無料で登録する」をクリックし、無料版のアカウントを作る。クレジットカードの情報の登録が必要なのでご注意ください。
+2. 「無料で登録する」をクリックし、無料版のアカウントを作成する。クレジットカードの情報の登録が必要なのでご注意ください。
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/200298208-7cf1982c-1322-4d23-907b-b01b74431686.jpg" alt="deeplapi">
 </div>
@@ -81,7 +81,7 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 *[チグサウェブ](https://chigusa-web.com/blog/deepl-api/)* (参照 2022-11-7)
 
 ## 3. Google Cloud Speech-to-Text API
-#### 3.1 Google Cloudとは
+#### 3.1 Google Cloud Speech-to-Text とは
 
 <p> Google Cloud Speech-to-Text APIは音声データから文字起こしをするAPIです。この音声データは音声ファイル(.wavや.flacなど)や、マイクから入力されるストリーム形式まで幅広く対応しています。サービス自体は数年前からありましたが、最近になりストリーミング音源のテキスト起こしが時間無制限でできるようになったみたいなので試してみました。</p>
 <div align="center">
@@ -89,6 +89,46 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図8&nbsp;&nbsp;&nbsp;&nbsp;Google Cloud Speech-to-Text</p>
 
+#### 3.2 Google Cloud Speech-to-Textの使い方
+1. Google Cloud ConsoleのURLを開く:https://console.cloud.google.com/
+2. 「無料トライアルに登録」をクリックし、Google Cloudアカウントを作成する。クレジットカードの情報の登録が必要なのでご注意ください。
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200508442-aa83cc9c-2837-4697-a349-16a91b2f9efa.jpg" alt="gcptrial">
+</div>
+<p align="center">図9&nbsp;&nbsp;&nbsp;&nbsp;無料トライアルに登録</p>
+
+3. ログインができたら、「Google Cloud」の右側にプロジェクトリストを開く。
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200508607-2295ac02-e13b-4d1d-b6ae-576d0500b6b6.jpg" alt="gcpproject1">
+</div>
+<p align="center">図10&nbsp;&nbsp;&nbsp;&nbsp;プロジェクトリストを開く</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;新しいプロジェクトをクリックする。次に、プロジェクト名等を記入し、新しいプロジェクトを作成する。</p>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200508733-75ea7917-68e0-4b3c-8c58-cd66d3ea8ced.jpg" alt="gcpproject2">
+</div>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200508853-6029d25c-b6f6-4284-9e13-9cc5ad9c2d8c.jpg" alt="gcpproject3">
+</div>
+
+<p align="center">図11&nbsp;&nbsp;&nbsp;&nbsp;新しいプロジェクトの作成</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;プロジェクトリストを再び開き、作成したプロジェクトを開く。</p>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200509021-fdd8518f-cf22-4c1c-a355-c9f6991d924d.jpg" alt="gcpproject4">
+</div>
+<p align="center">図12&nbsp;&nbsp;&nbsp;&nbsp;作成したプロジェクトを開く</p>
+
+4. ナビゲーションメニューを開き、「APIとサービス」の「ライブラリー」を開く。
+<p>&nbsp;&nbsp;&nbsp;&nbsp;プロジェクトリストを再び開き、作成したプロジェクトを開く。</p>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200509653-44f84a4d-3e4f-4e9d-986a-bf3798888efa.jpg" alt="sttlibrary">
+</div>
+<p align="center">図13&nbsp;&nbsp;&nbsp;&nbsp;APIのライブラリー</p>
+
+
+
 参考文献: <br>
 *[Optim Tech Blog](https://tech-blog.optim.co.jp/entry/2020/02/21/163000#Google-Cloud-Speech-to-Text-API-%E3%81%A8%E3%81%AF)* (参照 2022-11-7)
-
+*[Youtube チュートリアル](youtube.com/watch?v=lKra6E_tp5U&t=654s)* (参照 2022-11-8)

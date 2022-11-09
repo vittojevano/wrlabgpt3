@@ -202,7 +202,7 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;作成が完成したらGoogle Cloud APIキーがダウンロードされます。</p>
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/88228805/200538971-340fa944-8a34-4530-9150-6d736a0a1b2c.jpg" alt="sttkey4">
+  <img src="https://user-images.githubusercontent.com/88228805/200793002-9bc64b15-5ff9-475e-a550-275466c1dda1.jpg" alt="sttkey4">
 </div>
 <p align="center">図23&nbsp;&nbsp;&nbsp;&nbsp;Google Cloud APIキー</p>   
 

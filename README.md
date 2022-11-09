@@ -218,3 +218,8 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 # II. プログラムの説明
 
 ## 1. システムの全体的な構造
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200803515-4c12fd13-e21b-4c54-ad2d-092a5a4439cf.jpg" alt="systemoverall">
+</div>
+
+

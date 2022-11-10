@@ -19,7 +19,7 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図1&nbsp;&nbsp;&nbsp;&nbsp;GPT-3の自然言語処理「Word to Vector」（言葉をベクトル化する）</p>
 
-#### 1.2 GPT-3の使い方
+#### 1.2 GPT-3のAPIキーの設定
 
 1. OpenAIのURLを開く: https://openai.com/api/
 2. 「Sign Up」をクリックし、アカウントを作成する。電話番号やクレジットカードの情報の登録が必要なのでご注意ください。
@@ -55,7 +55,7 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図4&nbsp;&nbsp;&nbsp;&nbsp;DeepL 翻訳サービス</p>
 
-#### 2.2 DeepL翻訳の使い方
+#### 2.2 DeepL翻訳のAPIキーの設定
 
 1. DeepL翻訳 APIのURLを開く: https://www.deepl.com/pro-api?cta=header-pro-api
 2. 「無料で登録する」をクリックし、無料版のアカウントを作成する。クレジットカードの情報の登録が必要なのでご注意ください。
@@ -93,7 +93,7 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図8&nbsp;&nbsp;&nbsp;&nbsp;Google Cloud Speech-to-Text</p>
 
-#### 3.2 Google Cloud Speech-to-Textの使い方
+#### 3.2 Google Cloud Speech-to-TextのAPIキーの設定
 1. Google Cloud ConsoleのURLを開く:https://console.cloud.google.com/
 2. 「無料トライアルに登録」をクリックし、Google Cloudアカウントを作成する。クレジットカードの情報の登録が必要なのでご注意ください。
 

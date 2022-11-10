@@ -41,8 +41,8 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 
 
 参考文献: <br>
-*[ビジネス+IT](https://www.sbbit.jp/article/cont1/74706)* (参照 2022-11-7) <br>
-*[楽しみながら理解するAI・機械学習入門](https://data-analytics.fun/2021/12/01/gpt-3-api/)* (参照 2022-11-7)
+[ビジネス+IT](https://www.sbbit.jp/article/cont1/74706) (参照 2022-11-7) <br>
+[楽しみながら理解するAI・機械学習入門](https://data-analytics.fun/2021/12/01/gpt-3-api/) (参照 2022-11-7)
 
 ## 2. DeepL翻訳 API
 #### 2.1 DeepL翻訳とは
@@ -81,8 +81,8 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 
 
 参考文献: <br>
-*[Teachme Biz](https://biz.teachme.jp/blog/deepl_translation/)* (参照 2022-11-7)<br>
-*[チグサウェブ](https://chigusa-web.com/blog/deepl-api/)* (参照 2022-11-7)
+[Teachme Biz](https://biz.teachme.jp/blog/deepl_translation/) (参照 2022-11-7)<br>
+[チグサウェブ](https://chigusa-web.com/blog/deepl-api/) (参照 2022-11-7)
 
 ## 3. Google Cloud Speech-to-Text API
 #### 3.1 Google Cloud Speech-to-Text とは
@@ -211,15 +211,37 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 
 
 参考文献: <br>
-*[Optim Tech Blog](https://tech-blog.optim.co.jp/entry/2020/02/21/163000#Google-Cloud-Speech-to-Text-API-%E3%81%A8%E3%81%AF)* (参照 2022-11-7)　<br>
-*[Youtube チュートリアル](youtube.com/watch?v=lKra6E_tp5U&t=654s)* (参照 2022-11-8)
+[Optim Tech Blog](https://tech-blog.optim.co.jp/entry/2020/02/21/163000#Google-Cloud-Speech-to-Text-API-%E3%81%A8%E3%81%AF) (参照 2022-11-7)　<br>
+[Youtube チュートリアル](youtube.com/watch?v=lKra6E_tp5U&t=654s) (参照 2022-11-8)
 
 
 # II. プログラムの説明
 
 ## 1. システムの全体的な構造
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/88228805/200803515-4c12fd13-e21b-4c54-ad2d-092a5a4439cf.jpg" alt="systemoverall">
-</div>
 
+
+システム全体の構造の図は以下の図24に示します。
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/201015313-a68d71db-3f39-46f0-a2fe-48a4673b6269.jpg" alt="systemoverall">
+</div>
+<p align="center">図24&nbsp;&nbsp;&nbsp;&nbsp;システム全体の構造の図</p>   
+
+1. ロボット、あるいはマイクからの音声をGoogle Cloud Text-to-Speechで文字文字起こしを行う。
+2. 文字起こしの後、DeepL翻訳で英語に変換する。
+3. 翻訳したテキストをGPT-3で処理し、テキストに対しての返事をもらう。
+4. 返事したものをDeepL翻訳でターゲットの言語に変換し、ロボットに返します。
+
+> なぜ英語に変換する必要がありますか？
+<p>&nbsp;&nbsp;&nbsp;&nbsp;GPT-3のパラメータデータを見ると、GPT-3は92%英語から作られており、日本語は0.16%にしか当たりません。英語に変換すると、GPT-3は効率的に使用できると考えられます。</p>
+参照: https://github.com/openai/gpt-3/blob/master/dataset_statistics/languages_by_character_count.csv
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/201022548-af34471c-66f6-42ba-bf01-37788673b4bf.jpg" alt="gpt3para">
+</div>
+<p align="center">図25&nbsp;&nbsp;&nbsp;&nbsp;GPT-3のパラメータデータ</p>
+
+具体的なシステムの流れは以下の図26に示します。
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/201031597-e30237c4-033b-4cc5-80fb-0cfb57926694.jpg" alt="systempreview">
+</div>
+<p align="center">図26&nbsp;&nbsp;&nbsp;&nbsp;全体システムの流れ</p>
 

@@ -202,10 +202,9 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;作成が完成したらGoogle Cloud APIキーがダウンロードされます。</p>
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/88228805/200793002-9bc64b15-5ff9-475e-a550-275466c1dda1.jpg" alt="sttkey4">
+  <img src="https://user-images.githubusercontent.com/88228805/201032395-86c0b0e9-0c42-49af-8c67-cbc052b51cda.jpg" alt="sttkey4">
 </div>
 <p align="center">図23&nbsp;&nbsp;&nbsp;&nbsp;Google Cloud APIキー</p>   
-
 
 11. 作成したGoogle Cloud APIキーを全てコピーし、apikeyのフォルダを開き、Cloud_KEY.jsonの中に貼り付ける。
 
@@ -244,4 +243,16 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
   <img src="https://user-images.githubusercontent.com/88228805/201031597-e30237c4-033b-4cc5-80fb-0cfb57926694.jpg" alt="systempreview">
 </div>
 <p align="center">図26&nbsp;&nbsp;&nbsp;&nbsp;全体システムの流れ</p>
+
+#### 1.1 gpt3en.py
+
+```
+# APIキーの読み取りを確認
+with open(r"apikey/api_secrets.txt", "r") as file:
+```
+apikeyフォルダのの中のapi_secrets.txtのファイルを読み取る
+```
+    openai.api_key = file.readline()
+```
+また、api_secrets.txtの中に書いてある1行の文字を読み取る。
 

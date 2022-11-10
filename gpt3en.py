@@ -7,9 +7,6 @@ with open(r"apikey/api_secrets.txt", "r") as file:
 
 
 class GPT3(object):
-    '''
-
-    '''
     MAX_CONVO_MESSAGES = 20  # 最後の20メッセージだけを呼び出す
     convo_message_prompt = "The following is a conversation with an AI named PALRO. PALRO is talkative, clever, friendly, and likes to talk with humans.\n\nHuman: Let's talk about food. What food do you like?\nAI: I like sushi a lot! It tasted sweet and yummy!\nHuman: How about sports? Are you Interested in sports?\nAI: Yes! I really like basketball and soccer!\n"
     # convo_message_prompt = f"The following is a conversation with an AI called {Const.MyName}. {Const.MyName} is helpful, creative, clever, likes to talk to people, and very friendly.\n\n"

@@ -244,7 +244,7 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 </div>
 <p align="center">図26&nbsp;&nbsp;&nbsp;&nbsp;全体システムの流れ</p>
 
-#### 1. gpt3en.py
+#### 1. gpt3en.py　[GPT-3]
 
 ```
 # APIキーの読み取りを確認
@@ -270,6 +270,16 @@ GPT-3のpromptを毎回出すとき`MAX_CONVO_MESSAGES`にある文章を環境�
     convo_message_prompt = "...."
 ```
 ここではGPT-3の環境設定を行う。例えば「AIはおしゃべりで、賢くて、人間と話すのが好き。」
+ただ、GPT-3は英語上で動かしたいので、ここで英語で環境を設定します。("The following is a conversation between an AI....")
+
+
+```
+    def conversation(self, input_message=None):
+        input_message_str = self.convo_message_prompt + \
+            "\n".join(input_messages[-self.MAX_CONVO_MESSAGES:]) + "\n"
+```
+input_message_strは上で設定した環境設定と記録した会話を一つのメッセージとします。
+
 #### 2. streaming.py
 #### 3. googlestt.py
 #### 4. translate.py

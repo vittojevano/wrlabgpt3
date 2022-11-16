@@ -29,20 +29,21 @@ class SysState(object):
         self._gptsys.start_listening()
 
         # GPT3からの応答を聞き、文章を生成するためのプール思考モジュール
-        get_respond_state, respond_message = self._gptsys.get_respond()
-
+        get_respond_state, respond_message, respond_messsage_translated = self._gptsys.get_respond()
 
         if get_respond_state == GetRespondState.HearingTimeOut:
             # 人間から連絡がない、最後の会話を記録から削除する。
-            print("Listening now")
-            self._gptsys.remove_last_conversation()
+            self._gptsys.speak("Please speak again",
+                               "すみません、あなたの声が聞こえません。もう一度お願いします。", record=False)
         elif get_respond_state == GetRespondState.GPT3TimeOut:
             # GPT3の問題が発生した場合、最後の会話を削除します。
             self._gptsys.remove_last_conversation()
-            print("GPT3 Error, please state again")
+            self._gptsys.speak("GPT3 Error, please state again",
+                               "すみません、ちょっと考えがまとまりません。もう一度お願いします。", record=False)
         elif get_respond_state == GetRespondState.Completed:
             if respond_message is not None and len(respond_message) > 0:
-                print("AI:", respond_message)
+                self._gptsys.speak(
+                    respond_message, respond_messsage_translated)
 
     def _reset(self):
         # 聞くのをやめる

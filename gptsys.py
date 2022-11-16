@@ -34,13 +34,14 @@ class GPTSystem():
         self._gpt3_call_completed = False
         self._stop_watch = Timeset()
 
-    def speak(self, text, record=True):
-        print(f"AI:{text}")
+    def speak(self, text, text_translated, record=True):
+        print(f"AI:{text_translated}")
         self._googlestt.stop_listening()
 
         # Record what the AI said
         if record:
             self._conversations.append(f"AI:{text}")
+            # print("\n".join(self._conversations))
 
     def start_listening(self):
         self._googlestt.start_listening()
@@ -50,6 +51,7 @@ class GPTSystem():
 
     def get_respond(self):
         respond_message = None
+        respond_message_translated = None
 
         # Start the state machine if the state was idle or previously completed/timeout
         if self._respond_state in [GetRespondState.Idle, GetRespondState.GPT3TimeOut, GetRespondState.HearingTimeOut, GetRespondState.Completed]:
@@ -99,7 +101,8 @@ class GPTSystem():
                 # Return the GPT3 response:
                 respond_message = self._last_gpt3_response
                 # Translate back to Japanese
-                respond_message = self._translate.transjp(respond_message)
+                respond_message_translated = self._translate.transjp(
+                    respond_message)
             else:
                 # Keep waiting until timeout
                 duration = self._stop_watch.get() / 1000
@@ -107,7 +110,7 @@ class GPTSystem():
                 if duration >= self.Gpt3TimeOut:
                     self._respond_state = GetRespondState.GPT3TimeOut
 
-        return self._respond_state, respond_message
+        return self._respond_state, respond_message, respond_message_translated
 
     def reset(self):
         self.stop_listening()

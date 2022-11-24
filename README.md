@@ -214,7 +214,18 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 [Youtube チュートリアル](youtube.com/watch?v=lKra6E_tp5U&t=654s) (参照 2022-11-8)
 
 
-# II. プログラムの説明
+# II. プログラムの設定や実行(編集中)
+
+実行するためには以下の手順に説明する。
+
+1. Python(パイソン)をダウンロードする。https://www.python.org/downloads/
+2. フォルダを開く
+3. コマンドプロンプトを開く
+4. パイソンのバージョンを確認する
+5. 他のパッケージをインストールする
+6. robotsystem.pyを実行する
+
+# III. プログラムの説明(編集中)
 
 ## 1. システムの全体的な構造
 

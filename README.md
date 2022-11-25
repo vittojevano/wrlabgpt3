@@ -221,6 +221,17 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 1. wrlabgpt3のフォルダをダウンロードする
 また、以上のAPIキーのガイドからAPIキーを設定する
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/200535949-d4f5054f-4d4c-4504-a024-b4bde36a9f66.jpg" alt="serviceacc1">
+  <img src="https://user-images.githubusercontent.com/88228805/200536038-8f866067-237b-4bb9-b8e0-91bb304931b9.jpg" alt="serviceacc2">
+</div>
+
+![py](https://user-images.githubusercontent.com/88228805/203960850-40e9534d-57fd-4119-adc9-9a48b6e7342b.png)
+![py1](https://user-images.githubusercontent.com/88228805/203960791-ec5babd2-9ddb-4a61-9ffa-311e2953b1d9.png)
+![py2](https://user-images.githubusercontent.com/88228805/203960817-c294ec5d-2363-43f4-8791-d82c8d72fe94.png)
+![py3](https://user-images.githubusercontent.com/88228805/203960837-4d4d252c-24f5-4def-9cbe-579f8e6a5966.png)
+
+
 2. Python(パイソン)をダウンロードする
 以下のリンクにパイソンをダウンロードすることができます。
 https://www.python.org/downloads/

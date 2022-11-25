@@ -218,12 +218,37 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 
 実行するためには以下の手順に説明する。
 
-1. Python(パイソン)をダウンロードする。https://www.python.org/downloads/
-2. フォルダを開く
-3. コマンドプロンプトを開く
-4. パイソンのバージョンを確認する
-5. 他のパッケージをインストールする
-6. robotsystem.pyを実行する
+1. wrlabgpt3のフォルダをダウンロードする
+また、以上のAPIキーのガイドからAPIキーを設定する
+
+2. Python(パイソン)をダウンロードする
+以下のリンクにパイソンをダウンロードすることができます。
+https://www.python.org/downloads/
+
+3. フォルダを開く
+wrlabgpt3のフォルダを開く。
+
+4. コマンドプロンプトを開く
+右クリック-> 
+
+5. パイソンのバージョンを確認する
+コマンドプロンプトのところに、
+`python3 --version`
+
+
+6. 他のパッケージをインストールする
+pipのバージョンが確認できたら、
+コマンドプロンプトに以下のテキストを入れると、
+必要なパッケージをダウンロードします。
+`pip install pyaudio`
+`pip install --upgrade google-cloud-speech`
+`pip install openai`
+`pip install deepl`
+
+7. robotsystem.pyを実行する
+コマンドプロンプトに、
+`python robotsystem.py`
+を実行するとプログラムを開始します。
 
 # III. プログラムの説明(編集中)
 

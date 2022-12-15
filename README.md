@@ -224,7 +224,7 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 2. Python(パイソン)をダウンロードする
 以下のリンクにパイソンをダウンロードすることができる。
 https://www.python.org/downloads/
-Windows上で起動する場合、<i>Windows installer (64-bit)</i> を選択する、
+Windows上で起動する場合、<i>Windows installer (64-bit)</i> を選択する。
 <div align="center">
   <img src="https://user-images.githubusercontent.com/88228805/203960850-40e9534d-57fd-4119-adc9-9a48b6e7342b.png" alt="python">
 </div>

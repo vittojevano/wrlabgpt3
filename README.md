@@ -214,52 +214,58 @@ Main Reference: *[Building Ellee — A GPT-3 and Computer Vision-Powered Talking
 [Youtube チュートリアル](youtube.com/watch?v=lKra6E_tp5U&t=654s) (参照 2022-11-8)
 
 
-# II. プログラムの設定や実行(編集中)
+# II. プログラムの設定や実行
 
 実行するためには以下の手順に説明する。
 
 1. wrlabgpt3のフォルダをダウンロードする
 また、以上のAPIキーのガイドからAPIキーを設定する
 
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/88228805/200535949-d4f5054f-4d4c-4504-a024-b4bde36a9f66.jpg" alt="serviceacc1">
-  <img src="https://user-images.githubusercontent.com/88228805/200536038-8f866067-237b-4bb9-b8e0-91bb304931b9.jpg" alt="serviceacc2">
-</div>
-
-![py](https://user-images.githubusercontent.com/88228805/203960850-40e9534d-57fd-4119-adc9-9a48b6e7342b.png)
-![py1](https://user-images.githubusercontent.com/88228805/203960791-ec5babd2-9ddb-4a61-9ffa-311e2953b1d9.png)
-![py2](https://user-images.githubusercontent.com/88228805/203960817-c294ec5d-2363-43f4-8791-d82c8d72fe94.png)
-![py3](https://user-images.githubusercontent.com/88228805/203960837-4d4d252c-24f5-4def-9cbe-579f8e6a5966.png)
-
-
 2. Python(パイソン)をダウンロードする
-以下のリンクにパイソンをダウンロードすることができます。
+以下のリンクにパイソンをダウンロードすることができる。
 https://www.python.org/downloads/
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/203960850-40e9534d-57fd-4119-adc9-9a48b6e7342b.png" alt="python">
+</div>
+<p align="center">図24&nbsp;&nbsp;&nbsp;&nbsp;Pythonのインストール</p>  
+ダウンロードができましたら、ファイルを開く。
+Install Now をクリックする前に、下側にAdd python.exe to PATHをチェックする。
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/203960791-ec5babd2-9ddb-4a61-9ffa-311e2953b1d9.png" alt="python1">
+</div>
+<p align="center">図25&nbsp;&nbsp;&nbsp;&nbsp;Add python.exe to PATH</p>   
+
+次に、pipにチェックし、Nextをクリックし、インストールを行う。
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88228805/203960817-c294ec5d-2363-43f4-8791-d82c8d72fe94.png" alt="python2">
+  <img src="https://user-images.githubusercontent.com/88228805/203960837-4d4d252c-24f5-4def-9cbe-579f8e6a5966.png" alt="python3">
+</div>
+<p align="center">図24&nbsp;&nbsp;&nbsp;&nbsp;Pipのインストール</p>  
 
 3. フォルダを開く
 wrlabgpt3のフォルダを開く。
 
 4. コマンドプロンプトを開く
-右クリック-> 
+右クリック-> コマンドプロンプトに開く
 
 5. パイソンのバージョンを確認する
-コマンドプロンプトのところに、
-`python3 --version`
-
+コマンドプロンプトのところに、<br>
+`python --version`<br>
+を書くとpython言語のバージョンを確認することができる。
 
 6. 他のパッケージをインストールする
 pipのバージョンが確認できたら、
 コマンドプロンプトに以下のテキストを入れると、
-必要なパッケージをダウンロードします。
-`pip install pyaudio`
-`pip install --upgrade google-cloud-speech`
-`pip install openai`
-`pip install deepl`
+必要なパッケージをダウンロードする。<br>
+`pip install pyaudio`<br>
+`pip install --upgrade google-cloud-speech`<br>
+`pip install openai`<br>
+`pip install deepl`<br>
 
 7. robotsystem.pyを実行する
 コマンドプロンプトに、
 `python robotsystem.py`
-を実行するとプログラムを開始します。
+を実行するとプログラムが開始する。
 
 # III. プログラムの説明(編集中)
 

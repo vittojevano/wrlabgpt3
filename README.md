@@ -268,7 +268,7 @@ pipのバージョンが確認できたら、
 `python robotsystem.py`
 を実行するとプログラムが開始する。
 
-# III. プログラムの説明(編集中)
+# III. プログラムの説明
 
 ## 1. システムの全体的な構造
 
@@ -297,47 +297,3 @@ pipのバージョンが確認できたら、
   <img src="https://user-images.githubusercontent.com/88228805/201031597-e30237c4-033b-4cc5-80fb-0cfb57926694.jpg" alt="systempreview">
 </div>
 <p align="center">図26&nbsp;&nbsp;&nbsp;&nbsp;全体システムの流れ</p>
-
-#### 1. gpt3en.py　[GPT-3]
-
-```
-# APIキーの読み取りを確認
-with open(r"apikey/api_secrets.txt", "r") as file:
-```
-apikeyフォルダのの中のapi_secrets.txtのファイルを読み取る
-
-
-```
-    openai.api_key = file.readline()
-```
-また、api_secrets.txtの中に書いてある1行の文字を読み取る。
-
-
-```
-    MAX_CONVO_MESSAGES = 20  # 最後の20メッセージだけを呼び出す
-```
-会話中に20までの会話を記録する。<br>
-GPT-3のpromptを毎回出すとき`MAX_CONVO_MESSAGES`にある文章を環境設定と一緒に出す。
-
-
-```
-    convo_message_prompt = "...."
-```
-ここではGPT-3の環境設定を行う。例えば「AIはおしゃべりで、賢くて、人間と話すのが好き。」
-ただ、GPT-3は英語上で動かしたいので、ここで英語で環境を設定します。("The following is a conversation between an AI....")
-
-
-```
-    def conversation(self, input_message=None):
-        input_message_str = self.convo_message_prompt + \
-            "\n".join(input_messages[-self.MAX_CONVO_MESSAGES:]) + "\n"
-```
-input_message_strは上で設定した環境設定と記録した会話を一つのメッセージとします。
-
-#### 2. streaming.py
-#### 3. googlestt.py
-#### 4. translate.py
-#### 5. timeset.py
-#### 6. gptsys.py
-#### 7. fullsys.py
-#### 8. robotsystem.py

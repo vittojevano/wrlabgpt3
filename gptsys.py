@@ -2,17 +2,19 @@ import os
 import random
 import threading
 
+
 from googlestt import GoogleSTT
 from gpt3en import GPT3
 from translate import Deepltranslate
 from timeset import Timeset
+from udpclient import UDPClient
 
 
 class GetRespondState():
     Idle = "Idle"
     Listening = "Listening"
     WaitingForGPT3 = "WaitingForGPT3"
-    HearingTimeOut = "HearingTimeOut"
+    GooglesttTimeOut = "GooglesttTimeOut"
     GPT3TimeOut = "GPT3TimeOut"
     Completed = "Completed"
 
@@ -21,23 +23,32 @@ class GPTSystem():
 
     HumanPrefix = "Human"
 
-    ListeningTimeOut = 10
-    Gpt3TimeOut = 5
+    ListeningTimeOut = 35
+    Gpt3TimeOut = 15
 
     def __init__(self):
         self._conversations = []
-        self._googlestt = GoogleSTT()  # thoughts
-        self._gpt = GPT3()  # hearing
-        self._translate = Deepltranslate()  # deepl
+        self._googlestt = GoogleSTT()
+        self._gpt = GPT3()
+        self._translate = Deepltranslate()
         self._respond_state = GetRespondState.Idle
         self._last_gpt3_response = None
         self._gpt3_call_completed = False
         self._stop_watch = Timeset()
+        self._udp = UDPClient()
+
+    def append_ai(self):
+        self._conversations.append("AI: ")
+
+    def speakonly(self, text_translated):
+        print(f"AI:{text_translated}")
+        self._udp.SendUDP(text_translated)
 
     def speak(self, text, text_translated, record=True):
         print(f"AI:{text_translated}")
         self._googlestt.stop_listening()
-
+        self._udp.SendUDP(text_translated)
+        # self._udp.ReceiveTCP()
         # Record what the AI said
         if record:
             self._conversations.append(f"AI:{text}")
@@ -54,7 +65,7 @@ class GPTSystem():
         respond_message_translated = None
 
         # Start the state machine if the state was idle or previously completed/timeout
-        if self._respond_state in [GetRespondState.Idle, GetRespondState.GPT3TimeOut, GetRespondState.HearingTimeOut, GetRespondState.Completed]:
+        if self._respond_state in [GetRespondState.Idle, GetRespondState.GPT3TimeOut, GetRespondState.GooglesttTimeOut, GetRespondState.Completed]:
             self.start_listening()
             # Problem, sometimes doesnt stop hearing
             self._respond_state = GetRespondState.Listening
@@ -92,7 +103,7 @@ class GPTSystem():
                 duration = self._stop_watch.get() / 1000
 
                 if duration >= self.ListeningTimeOut:
-                    self._respond_state = GetRespondState.HearingTimeOut
+                    self._respond_state = GetRespondState.GooglesttTimeOut
 
         elif self._respond_state == GetRespondState.WaitingForGPT3:
             if self._gpt3_call_completed:

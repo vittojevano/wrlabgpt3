@@ -41,7 +41,6 @@ class MicrophoneStream(object):
         # 初めて起動するときに音声をに聞かない
         self._listening = False
         self.closed = False
-        # print("ここはenter")
 
         return self
 
@@ -98,8 +97,8 @@ class SpeechInputRecognitionStreaming(object):
 
     def __init__(self):
         self._language_supports = "ja-JP"  # 日本語を受け取るに設定
-        self.ready = False
         self._stream = None
+        self.ready = False
 
     def _listenPrintLoop(self, responses, callback, stream):
         """Iterates through server responses and prints them.
@@ -146,7 +145,7 @@ class SpeechInputRecognitionStreaming(object):
 
                 # 話す途中に聞かない
                 # stream.setListening(False)
-
+                # self.ready = False
                 if stream.isListening():
                     if callback(finaltext, result.language_code):
                         break
@@ -159,7 +158,7 @@ class SpeechInputRecognitionStreaming(object):
     def set_listening(self, is_listening):
         if not self.ready:
             # readyがTrueになるまでに待つ。
-            time = threading.Timer(3.0, self.set_listening, [is_listening])
+            time = threading.Timer(2.0, self.set_listening, [is_listening])
             time.start()
         else:
             self._stream.setListening(is_listening)
@@ -209,5 +208,5 @@ class SpeechInputRecognitionStreaming(object):
                     break
                 except Exception as ex:
                     # Most Likely stream too long Exception, so just log and restart
-                    print(ex)
+                    # print(ex)
                     pass

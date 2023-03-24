@@ -1,8 +1,9 @@
 from streaming import SpeechInputRecognitionStreaming
 import threading
 
-#with open(r"apikey/api_secrets.txt", "r") as file:
+# with open(r"apikey/api_secrets.txt", "r") as file:
 #   openai.api_key = file.readline()
+
 
 class GoogleSTT(object):
 
@@ -23,7 +24,7 @@ class GoogleSTT(object):
         if not self._sr.is_listening():
             self._last_speech_message = None
             self._sr.set_listening(True)
-    
+
     def stop_listening(self):
         self._sr.set_listening(False)
 
@@ -35,7 +36,7 @@ class GoogleSTT(object):
 
         return False
 
-    def _callback(self,data):
+    def _callback(self, data):
         self._sr.listen_forever(self._speech_callback)
 
     def is_ready(self):
